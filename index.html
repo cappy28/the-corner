@@ -24,6 +24,62 @@
 
 <body data-theme="arras">
 
+  <!-- SAS D'ACCÈS -->
+<div class="access-gate" id="accessGate">
+  <div class="access-orbit access-orbit--one"></div>
+  <div class="access-orbit access-orbit--two"></div>
+
+  <div class="access-panel">
+    <div class="access-logo">
+      <img src="assets/logo.png" alt="The Corner Concept Store" />
+    </div>
+
+    <p class="access-kicker">
+      Private preview / The Corner
+    </p>
+
+    <h1>
+      Enter the
+      <span>corner.</span>
+    </h1>
+
+    <p class="access-description">
+      Cette expérience est réservée à la présentation de la nouvelle
+      identité digitale The Corner.
+    </p>
+
+    <form id="accessForm" novalidate>
+      <label for="sitePassword">
+        Mot de passe d'accès
+      </label>
+
+      <div class="access-form-row">
+        <input
+          id="sitePassword"
+          type="password"
+          placeholder="Entrer le mot de passe"
+          autocomplete="off"
+        />
+
+        <button class="button button--light" type="submit">
+          Entrer
+          <span>↗</span>
+        </button>
+      </div>
+    </form>
+
+    <p
+      class="access-error"
+      id="accessError"
+      aria-live="polite"
+    ></p>
+
+    <p class="access-locations">
+      ARRAS — BÉTHUNE — MONTIGNY
+    </p>
+  </div>
+</div>
+
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
