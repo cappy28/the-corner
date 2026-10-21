@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Corner — Concept Store</title>
+
+  <meta
+    name="description"
+    content="The Corner Concept Store — Mode, barber, culture et événements à Arras, Béthune et Montigny."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+
+      <a href="#top" class="brand">
+        <span class="brand-logo">
+          <img src="assets/logo-white.png" alt="Logo The Corner" />
+        </span>
+
+        <span class="brand-text">
+          THE CORNER
+          <small>CONCEPT STORE</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#concepts">Les concepts</a>
+        <a href="#univers">L'univers</a>
+        <a href="#collection">Collection</a>
+        <a href="#events">Événements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="#concepts">Les concepts</a>
+      <a href="#univers">L'univers</a>
+      <a href="#collection">Collection</a>
+      <a href="#events">Événements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-background-grid"></div>
+
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+          <p class="eyebrow eyebrow-light">
+            <span></span>
+            3 concepts / 1 identité
+          </p>
+
+          <h1>
+            Le style
+            <em>au coin</em>
+            de la rue.
+          </h1>
+
+          <p class="hero-description">
+            The Corner est un concept store qui mélange mode, barber,
+            culture et rencontres dans trois univers différents.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#concepts" class="button button-acid">
+              Découvrir les corners
+              <span>↘</span>
+            </a>
+
+            <a href="#collection" class="button button-outline-light">
+              Voir la collection
+              <span>↗</span>
+            </a>
+          </div>
+
+          <div class="hero-infos">
+            <div>
+              <strong>ARRAS</strong>
+              <span>CONCEPT BLEU</span>
+            </div>
+
+            <div>
+              <strong>BÉTHUNE</strong>
+              <span>CONCEPT ORANGE</span>
+            </div>
+
+            <div>
+              <strong>MONTIGNY</strong>
+              <span>CONCEPT VERT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-image media-frame">
+            <img
+              src="assets/arras.jpg"
+              alt="Concept The Corner Arras"
+            />
+
+            <div class="hero-image-overlay"></div>
+
+            <div class="hero-image-label">
+              <span>01 / 03</span>
+              <strong>ARRAS</strong>
+            </div>
+          </div>
+
+          <div class="hero-logo-card">
+            <img src="assets/logo-white.png" alt="The Corner" />
+          </div>
+
+          <div class="hero-sticker">
+            MODE<br />
+            BARBER<br />
+            CULTURE
+          </div>
+
+          <div class="hero-side-label">
+            THE CORNER<br />
+            CONCEPT STORE
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container hero-bottom">
+        <span>
+          <i class="status-dot"></i>
+          Univers disponible
+        </span>
+
+        <span>Scroll pour découvrir ↓</span>
+      </div>
+    </section>
+
+    <!-- PROMOTION -->
+    <section class="promo-bar">
+      <div class="promo-track">
+        <div class="promo-item">
+          <strong>-50%</strong>
+          <span>sur le deuxième article</span>
+        </div>
+
+        <div class="promo-separator">✦</div>
+
+        <div class="promo-item">
+          <strong>19 OCTOBRE — 1ER NOVEMBRE</strong>
+          <span>dans les corners The Corner</span>
+        </div>
+
+        <div class="promo-separator">✦</div>
+
+        <div class="promo-item">
+          <strong>THE CORNER 24H</strong>
+          <span>événement à venir</span>
+        </div>
+
+        <div class="promo-separator">✦</div>
+
+        <div class="promo-item">
+          <strong>-50%</strong>
+          <span>sur le deuxième article</span>
+        </div>
+
+        <div class="promo-separator">✦</div>
+
+        <div class="promo-item">
+          <strong>19 OCTOBRE — 1ER NOVEMBRE</strong>
+          <span>dans les corners The Corner</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCEPTS -->
+    <section class="section concepts-section" id="concepts">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">
+              <span></span>
+              Les concepts
+            </p>
+
+            <h2>
+              Trois lieux.<br />
+              Trois ambiances.
+            </h2>
+          </div>
+
+          <p class="section-intro">
+            Chaque corner possède sa propre couleur, son atmosphère
+            et son énergie, tout en conservant l'ADN The Corner.
+          </p>
+        </div>
+
+        <div class="concept-layout">
+
+          <div class="concept-list">
+
+            <button
+              class="concept-card is-active"
+              type="button"
+              aria-pressed="true"
+              data-city="Arras"
+              data-index="01"
+              data-theme="blue"
+              data-color="#165dff"
+              data-image="assets/arras.jpg"
+              data-title="Le corner bleu"
+              data-description="Un espace bleu électrique dédié à la mode, au barber et à l'expérience The Corner."
+              data-tag="Mode · Barber · Lifestyle"
+            >
+              <span class="concept-card-number">01</span>
+
+              <span class="concept-card-content">
+                <strong>Arras</strong>
+                <small>Le concept bleu</small>
+              </span>
+
+              <span class="concept-card-arrow">↗</span>
+            </button>
+
+            <button
+              class="concept-card"
+              type="button"
+              aria-pressed="false"
+              data-city="Béthune"
+              data-index="02"
+              data-theme="orange"
+              data-color="#f15a24"
+              data-image="assets/bethune.jpg"
+              data-title="Le corner orange"
+              data-description="Une identité chaude et solaire pensée pour le shopping, le style et la convivialité."
+              data-tag="Mode · Barber · Culture"
+            >
+              <span class="concept-card-number">02</span>
+
+              <span class="concept-card-content">
+                <strong>Béthune</strong>
+                <small>Le concept orange</small>
+              </span>
+
+              <span class="concept-card-arrow">↗</span>
+            </button>
+
+            <button
+              class="concept-card"
+              type="button"
+              aria-pressed="false"
+              data-city="Montigny-en-Gohelle"
+              data-index="03"
+              data-theme="green"
+              data-color="#079566"
+              data-image="assets/montigny.jpg"
+              data-title="Le corner vert"
+              data-description="Un univers vert reconnaissable, pensé comme un lieu de vie autour du style et du barber."
+              data-tag="Mode · Barber · Community"
+            >
+              <span class="concept-card-number">03</span>
+
+              <span class="concept-card-content">
+                <strong>Montigny</strong>
+                <small>Le concept vert</small>
+              </span>
+
+              <span class="concept-card-arrow">↗</span>
+            </button>
+
+          </div>
+
+          <article
+            class="concept-focus media-frame"
+            id="conceptFocus"
+            style="--concept-color: #165dff;"
+          >
+            <img
+              id="conceptFocusImage"
+              src="assets/arras.jpg"
+              alt="The Corner Arras"
+            />
+
+            <div class="concept-focus-overlay"></div>
+
+            <div class="concept-focus-top">
+              <span id="conceptFocusIndex">01 / 03</span>
+              <span id="conceptFocusTag">Mode · Barber · Lifestyle</span>
+            </div>
+
+            <div class="concept-focus-bottom">
+              <p>THE CORNER</p>
+
+              <h3 id="conceptFocusTitle">
+                Le corner bleu
+              </h3>
+
+              <p id="conceptFocusDescription">
+                Un espace bleu électrique dédié à la mode, au barber
+                et à l'expérience The Corner.
+              </p>
+
+              <a href="#contact" class="button button-light">
+                Découvrir ce corner
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIVERS -->
+    <section class="section universe-section dark-section" id="univers">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow eyebrow-light">
+              <span></span>
+              L'univers The Corner
+            </p>
+
+            <h2>
+              Plus qu'un shop.<br />
+              Un lifestyle.
+            </h2>
+          </div>
+
+          <p class="section-intro section-intro-light">
+            Un lieu où l'on vient pour s'habiller, se faire coiffer,
+            découvrir des nouveautés et partager un moment.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card service-card-blue reveal">
+            <div class="service-card-top">
+              <span>01</span>
+              <span>STYLE</span>
+            </div>
+
+            <div class="service-icon">✦</div>
+
+            <h3>Mode</h3>
+
+            <p>
+              Des pièces accessibles et actuelles pour construire
+              son propre style.
+            </p>
+
+            <span class="service-card-line"></span>
+          </article>
+
+          <article class="service-card service-card-orange reveal">
+            <div class="service-card-top">
+              <span>02</span>
+              <span>DETAILS</span>
+            </div>
+
+            <div class="service-icon">✂</div>
+
+            <h3>Barber</h3>
+
+            <p>
+              Une expérience barber intégrée au concept store,
+              autour de la précision et du détail.
+            </p>
+
+            <span class="service-card-line"></span>
+          </article>
+
+          <article class="service-card service-card-green reveal">
+            <div class="service-card-top">
+              <span>03</span>
+              <span>COMMUNITY</span>
+            </div>
+
+            <div class="service-icon">◎</div>
+
+            <h3>Culture</h3>
+
+            <p>
+              Des événements, des rencontres et une vraie énergie
+              autour des différents corners.
+            </p>
+
+            <span class="service-card-line"></span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTION -->
+    <section class="section collection-section" id="collection">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">
+              <span></span>
+              Catalogue
+            </p>
+
+            <h2>
+              Les pièces<br />
+              du corner.
+            </h2>
+          </div>
+
+          <p class="section-intro">
+            Une première sélection textile pour présenter l'identité
+            de la marque. Les produits pourront ensuite être remplacés
+            par les vraies références.
+          </p>
+        </div>
+
+        <div class="product-grid">
+
+          <article class="product-card reveal">
+            <div class="product-visual product-visual-dark">
+              <span class="product-number">01 / ESSENTIALS</span>
+
+              <div class="garment garment-hoodie">
+                <span class="garment-neck"></span>
+                <span class="garment-logo">THE<br />CORNER</span>
+              </div>
+
+              <span class="product-color-label">BLACK / WHITE</span>
+            </div>
+
+            <div class="product-card-bottom">
+              <div>
+                <span class="product-category">Collection textile</span>
+                <h3>Corner Hoodie</h3>
+              </div>
+
+              <button
+                class="round-button"
+                type="button"
+                data-product="hoodie"
+                aria-label="Voir le hoodie"
+              >
+                ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-visual product-visual-green">
+              <span class="product-number">02 / ESSENTIALS</span>
+
+              <div class="garment garment-tshirt">
+                <span class="garment-neck"></span>
+                <span class="garment-logo">TC / 01</span>
+              </div>
+
+              <span class="product-color-label">GREEN / WHITE</span>
+            </div>
+
+            <div class="product-card-bottom">
+              <div>
+                <span class="product-category">Collection textile</span>
+                <h3>Corner T-Shirt</h3>
+              </div>
+
+              <button
+                class="round-button"
+                type="button"
+                data-product="tshirt"
+                aria-label="Voir le t-shirt"
+              >
+                ↗
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="section events-section dark-section" id="events">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow eyebrow-light">
+              <span></span>
+              Actualités
+            </p>
+
+            <h2>
+              Ce qui se passe<br />
+              au corner.
+            </h2>
+          </div>
+
+          <p class="section-intro section-intro-light">
+            Les promotions et événements à venir seront visibles
+            directement depuis cette section.
+          </p>
+        </div>
+
+        <div class="events-grid">
+
+          <article class="event-card event-card-main reveal">
+            <span class="event-card-number">01 / EVENT</span>
+
+            <div class="event-ghost-number">24H</div>
+
+            <div class="event-card-content">
+              <p class="event-label">Événement à venir</p>
+
+              <h3>
+                The Corner<br />
+                24H
+              </h3>
+
+              <p>
+                Une journée et une nuit autour de la mode, du barber,
+                de la musique et de la culture.
+              </p>
+
+              <span class="event-date">
+                Date et lieu à confirmer
+              </span>
+            </div>
+          </article>
+
+          <article class="event-card event-card-promo reveal">
+            <span class="event-card-number">02 / OFFER</span>
+
+            <div class="promo-percent">-50%</div>
+
+            <div class="event-card-content">
+              <p class="event-label">Promotion en cours</p>
+
+              <h3>
+                Le deuxième<br />
+                article à moitié prix.
+              </h3>
+
+              <p>
+                Profite de l'offre The Corner sur la période indiquée.
+              </p>
+
+              <span class="event-date">
+                Du 19 octobre au 1er novembre
+              </span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / LOCATIONS -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div class="contact-copy reveal">
+            <p class="eyebrow">
+              <span></span>
+              Les corners
+            </p>
+
+            <h2>
+              Trouve ton<br />
+              <em>Corner.</em>
+            </h2>
+
+            <p>
+              Retrouvez l'univers The Corner à Arras, Béthune et
+              Montigny-en-Gohelle.
+            </p>
+
+            <p class="contact-note">
+              Les adresses, horaires et liens de réservation seront
+              ajoutés avec les informations définitives.
+            </p>
+          </div>
+
+          <div class="locations-list">
+
+            <article class="location-row location-blue reveal">
+              <div class="location-color"></div>
+
+              <div class="location-main">
+                <span>01 / BLEU</span>
+                <h3>Arras</h3>
+              </div>
+
+              <button
+                class="location-button"
+                type="button"
+                data-info-title="The Corner — Arras"
+                data-info-body="Les informations définitives du corner d'Arras seront ajoutées ici : adresse, horaires, téléphone et réseaux sociaux."
+              >
+                Voir
+                <span>↗</span>
+              </button>
+            </article>
+
+            <article class="location-row location-orange reveal">
+              <div class="location-color"></div>
+
+              <div class="location-main">
+                <span>02 / ORANGE</span>
+                <h3>Béthune</h3>
+              </div>
+
+              <button
+                class="location-button"
+                type="button"
+                data-info-title="The Corner — Béthune"
+                data-info-body="Les informations définitives du corner de Béthune seront ajoutées ici : adresse, horaires, téléphone et réseaux sociaux."
+              >
+                Voir
+                <span>↗</span>
+              </button>
+            </article>
+
+            <article class="location-row location-green reveal">
+              <div class="location-color"></div>
+
+              <div class="location-main">
+                <span>03 / VERT</span>
+                <h3>Montigny</h3>
+              </div>
+
+              <button
+                class="location-button"
+                type="button"
+                data-info-title="The Corner — Montigny"
+                data-info-body="Les informations définitives du corner de Montigny-en-Gohelle seront ajoutées ici : adresse, horaires, téléphone et réseaux sociaux."
+              >
+                Voir
+                <span>↗</span>
+              </button>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/logo-white.png" alt="The Corner" />
+          </div>
+
+          <p class="footer-slogan">
+            Meet us<br />
+            at <span>the corner.</span>
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <span>Navigation</span>
+            <a href="#concepts">Les concepts</a>
+            <a href="#univers">L'univers</a>
+            <a href="#collection">Collection</a>
+            <a href="#events">Événements</a>
+          </div>
+
+          <div>
+            <span>Contact</span>
+            <a href="#contact">Arras</a>
+            <a href="#contact">Béthune</a>
+            <a href="#contact">Montigny</a>
+            <a href="#contact">Réseaux sociaux</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> The Corner Concept Store</span>
+        <span>Mode · Barber · Culture</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODALE -->
+  <div
+    class="modal"
+    id="infoModal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <div class="modal-dialog">
+      <button
+        class="modal-close"
+        type="button"
+        aria-label="Fermer"
+        data-close-modal
+      >
+        ×
+      </button>
+
+      <p class="eyebrow">
+        <span></span>
+        The Corner
+      </p>
+
+      <h2 id="modalTitle">The Corner</h2>
+
+      <p id="modalBody">
+        Informations à venir.
+      </p>
+
+      <a href="#contact" class="button button-dark" data-close-modal>
+        Retourner aux corners
+        <span>↗</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
