@@ -1975,3 +1975,368 @@ a {
     font-size: 62px;
   }
 }
+
+/* =========================================
+   SAS D'ACCÈS
+========================================= */
+
+.access-gate {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--white);
+  background: var(--ink);
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.55s ease,
+    visibility 0.55s ease;
+}
+
+.access-gate.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.access-gate::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48%;
+  height: 100%;
+  background: var(--accent);
+  clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
+  content: "";
+  opacity: 0.95;
+}
+
+.access-orbit {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.access-orbit--one {
+  top: -260px;
+  right: 12%;
+  width: 650px;
+  height: 650px;
+}
+
+.access-orbit--two {
+  right: -200px;
+  bottom: -280px;
+  width: 650px;
+  height: 650px;
+}
+
+.access-panel {
+  position: relative;
+  z-index: 2;
+  width: min(650px, calc(100% - 40px));
+}
+
+.access-logo {
+  display: grid;
+  width: 105px;
+  height: 105px;
+  place-items: center;
+  margin-bottom: 38px;
+  padding: 18px;
+  background: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  transform: rotate(-7deg);
+}
+
+.access-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.access-kicker {
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.access-panel h1 {
+  max-width: 620px;
+  margin-top: 24px;
+  font-family: var(--font-display);
+  font-size: clamp(90px, 14vw, 190px);
+  font-weight: 700;
+  letter-spacing: -0.075em;
+  line-height: 0.7;
+  text-transform: uppercase;
+}
+
+.access-panel h1 span {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--white);
+}
+
+.access-description {
+  max-width: 390px;
+  margin-top: 38px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.access-form {
+  margin-top: 34px;
+}
+
+.access-form-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.access-form-row input {
+  width: min(350px, 100%);
+  height: 54px;
+  padding: 0 20px;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 100px;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 13px;
+}
+
+.access-form-row input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.access-form-row input:focus {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.access-panel label {
+  display: block;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.access-error {
+  min-height: 19px;
+  margin-top: 12px;
+  color: #ff8d73;
+  font-size: 11px;
+}
+
+.access-locations {
+  margin-top: 55px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.access-panel.has-error {
+  animation: accessShake 0.35s ease;
+}
+
+@keyframes accessShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-10px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+/* =========================================
+   POPUP DE BIENVENUE
+========================================= */
+
+.welcome-modal {
+  position: fixed;
+  z-index: 9998;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.76);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.welcome-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.welcome-content {
+  position: relative;
+  width: min(650px, 100%);
+  padding: 48px;
+  color: var(--ink);
+  background: var(--paper);
+  transform: translateY(25px);
+  transition: transform 0.35s ease;
+}
+
+.welcome-modal.is-open .welcome-content {
+  transform: translateY(0);
+}
+
+.welcome-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  transition: 0.25s ease;
+}
+
+.welcome-close:hover {
+  color: var(--white);
+  background: var(--ink);
+}
+
+.welcome-logo {
+  display: grid;
+  width: 86px;
+  height: 86px;
+  place-items: center;
+  margin-bottom: 35px;
+  padding: 16px;
+  background: var(--ink);
+  border-radius: 50%;
+}
+
+.welcome-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.welcome-content h2 {
+  max-width: 570px;
+  margin-top: 23px;
+  font-family: var(--font-display);
+  font-size: clamp(65px, 9vw, 115px);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 0.74;
+  text-transform: uppercase;
+}
+
+.welcome-content h2 strong {
+  display: block;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.welcome-text {
+  max-width: 480px;
+  margin-top: 33px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.welcome-content .button {
+  margin-top: 31px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .access-gate::before {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 43%;
+    clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .access-panel {
+    width: min(100% - 30px, 520px);
+  }
+
+  .access-logo {
+    width: 82px;
+    height: 82px;
+    margin-bottom: 30px;
+  }
+
+  .access-panel h1 {
+    font-size: clamp(75px, 23vw, 125px);
+  }
+
+  .access-description {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+
+  .access-form-row {
+    display: grid;
+  }
+
+  .access-form-row input {
+    width: 100%;
+  }
+
+  .access-form-row .button {
+    width: 100%;
+  }
+
+  .access-locations {
+    margin-top: 30px;
+    font-size: 8px;
+  }
+
+  .welcome-content {
+    padding: 35px 25px;
+  }
+
+  .welcome-logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 28px;
+  }
+
+  .welcome-content h2 {
+    font-size: 65px;
+  }
+
+  .welcome-text {
+    font-size: 13px;
+  }
+    }
+  
