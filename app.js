@@ -1,4 +1,86 @@
 const body = document.body;
+/* =========================================
+   SAS D'ACCÈS + POPUP DE BIENVENUE
+========================================= */
+
+// Mot de passe temporaire de la maquette
+const ACCESS_PASSWORD = "SECRETCORNER";
+
+const accessGate = document.getElementById("accessGate");
+const accessForm = document.getElementById("accessForm");
+const sitePassword = document.getElementById("sitePassword");
+const accessError = document.getElementById("accessError");
+
+const welcomeModal = document.getElementById("welcomeModal");
+const welcomeClose = document.getElementById("welcomeClose");
+const welcomeContinue = document.getElementById("welcomeContinue");
+
+// La session garde l'accès pendant la navigation
+const hasAccess =
+  sessionStorage.getItem("theCornerAccess") === "granted";
+
+if (hasAccess) {
+  accessGate.classList.add("is-hidden");
+} else {
+  body.classList.add("modal-open");
+
+  setTimeout(() => {
+    sitePassword.focus();
+  }, 300);
+}
+
+function openWelcomeModal() {
+  welcomeModal.classList.add("is-open");
+  welcomeModal.setAttribute("aria-hidden", "false");
+  body.classList.add("modal-open");
+}
+
+function closeWelcomeModal() {
+  welcomeModal.classList.remove("is-open");
+  welcomeModal.setAttribute("aria-hidden", "true");
+  body.classList.remove("modal-open");
+}
+
+accessForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const enteredPassword = sitePassword.value.trim();
+
+  if (enteredPassword === ACCESS_PASSWORD) {
+    sessionStorage.setItem("theCornerAccess", "granted");
+
+    accessError.textContent = "";
+    accessGate.classList.remove("has-error");
+    accessGate.classList.add("is-hidden");
+
+    setTimeout(() => {
+      openWelcomeModal();
+    }, 500);
+
+    return;
+  }
+
+  accessError.textContent =
+    "Mot de passe incorrect. Essaie encore.";
+
+  accessGate.classList.remove("has-error");
+
+  // Relance l'animation si elle était déjà présente
+  void accessGate.offsetWidth;
+
+  accessGate.classList.add("has-error");
+  sitePassword.select();
+});
+
+welcomeClose.addEventListener("click", closeWelcomeModal);
+welcomeContinue.addEventListener("click", closeWelcomeModal);
+
+welcomeModal.addEventListener("click", (event) => {
+  if (event.target === welcomeModal) {
+    closeWelcomeModal();
+  }
+});
+
 const header = document.getElementById("siteHeader");
 const mainNav = document.getElementById("mainNav");
 const menuToggle = document.getElementById("menuToggle");
@@ -218,5 +300,6 @@ productModal.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeProduct();
+    closeWelcomeModal();
   }
 });
